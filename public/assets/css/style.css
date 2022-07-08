@@ -1,0 +1,95 @@
+@font-face {
+    font-family: Lotr;
+    src: url("../../police/ringbearer.medium.ttf");
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: rgb(16, 65, 95);
+}
+.main {
+    font-family: Lotr;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-content: space-evenly;
+}
+
+img {
+    object-fit: cover;
+    height: 50%;
+    width: 100%;
+    border-radius: 14px 14px 0 0;
+}
+
+.cardContainer {
+    position: relative;
+    height: 390px;
+    width: 300px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.cardContainer:hover .card {
+    transform: rotateY(180deg);
+}
+
+.card {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    transition: all 0.3s ease;
+    transform-style: preserve-3d;
+}
+
+.cardFront {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background: rgb(218, 218, 218);
+    backface-visibility: hidden;
+    border-radius: 19px;
+}
+
+.cardFront.rare{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-image: url("https://img.myloview.fr/stickers/shiny-gold-texture-paper-or-metal-golden-vector-background-400-221403497.jpg");
+    backface-visibility: hidden;
+    border-radius: 15px;
+}
+.cardBack {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-image: url("../img/cardBackImg.jpg");
+    backface-visibility: hidden;
+    transform: rotateY(-180deg);
+    border-radius: 15px;
+}
+
+h2 {
+    text-align: center;
+    border: solid black;
+    border-radius: 20px;
+    margin: 0 5% 0;
+    background-color: whitesmoke;
+    padding: 5px;
+}
+
+.rare > div > h2 {
+    color: goldenrod;
+    background-color: rgb(189, 189, 189);
+}
+
+p {
+    text-align: center;
+    margin: 10%;
+    font-size: small;
+    padding-bottom: 2%;
+}
